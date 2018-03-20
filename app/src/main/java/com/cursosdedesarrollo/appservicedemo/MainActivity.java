@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Log.d("app","MainActivity: OnCreate");
         app=(Aplicacion)getApplication();
-        listado=app.getListado();
+        listado=app.modelo.getCadenasDAO().find();
         Log.d("app","MainActivity: Listado cargado desde la aplicacion:"+listado.toString());
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

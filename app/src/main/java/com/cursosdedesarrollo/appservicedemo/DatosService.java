@@ -20,7 +20,7 @@ public class DatosService extends IntentService {
         super("DatosService");
         app=(Aplicacion)getApplication();
         if(app!=null){
-            listado=app.getListado();
+            listado=app.modelo.getCadenasDAO().find();
             Log.d("app","DatosService: datos de la aplicacion: "+listado.toString());
         }
 

@@ -11,21 +11,14 @@ import java.util.List;
  */
 
 public class Aplicacion extends Application {
-    private List<String> listado;
+    public Modelo modelo;
     @Override
     public void onCreate() {
         super.onCreate();
+        modelo=new Modelo();
         Log.d("app","Aplicacion: Carga de mi clase Aplicación!");
-        listado=new ArrayList<String>();
-        loadListado();
-        Log.d("app","Aplicacion: Carga los datos: "+listado.toString());
+        modelo.getCadenasDAO().loadListado();
+        Log.d("app","Aplicacion: Carga los datos: "+modelo.getCadenasDAO().find().toString());
     }
-    private void loadListado(){
-        listado.add("Hola");
-        listado.add("Mundo");
 
-    }
-    public List<String> getListado(){
-        return listado;
-    }
 }
