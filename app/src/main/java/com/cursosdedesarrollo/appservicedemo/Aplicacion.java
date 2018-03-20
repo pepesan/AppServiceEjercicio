@@ -15,10 +15,15 @@ public class Aplicacion extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("app","Carga de mi clase Aplicación!");
+        Log.d("app","Aplicacion: Carga de mi clase Aplicación!");
         listado=new ArrayList<String>();
+        loadListado();
+        Log.d("app","Aplicacion: Carga los datos: "+listado.toString());
+    }
+    private void loadListado(){
         listado.add("Hola");
         listado.add("Mundo");
+
     }
     public List<String> getListado(){
         return listado;

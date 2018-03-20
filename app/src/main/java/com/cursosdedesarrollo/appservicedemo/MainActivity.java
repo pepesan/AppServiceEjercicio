@@ -10,16 +10,21 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
-    Aplicacion app;
+    private Aplicacion app;
+    private List<String> listado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Log.d("app","MainActivity OnCreate");
+        Log.d("app","MainActivity: OnCreate");
         app=(Aplicacion)getApplication();
+        listado=app.getListado();
+        Log.d("app","MainActivity: Listado cargado desde la aplicacion:"+listado.toString());
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
