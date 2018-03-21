@@ -10,13 +10,18 @@ import java.util.List;
 public class Modelo {
 
     private CadenasDAO cadenasDAO;
+    private UsuariosDAO usuariosDAO;
 
     Modelo(){
         cadenasDAO=new CadenasDAO();
+        usuariosDAO=new UsuariosDAO();
     }
 
     public CadenasDAO getCadenasDAO(){
         return cadenasDAO;
+    }
+    public UsuariosDAO getUsuariosDAO(){
+        return usuariosDAO;
     }
 
 

@@ -18,12 +18,17 @@ public class DatosService extends IntentService {
     private List<String> listado;
     public DatosService() {
         super("DatosService");
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
         app=(Aplicacion)getApplication();
         if(app!=null){
             listado=app.modelo.getCadenasDAO().find();
+            listado.add("!");
             Log.d("app","DatosService: datos de la aplicacion: "+listado.toString());
         }
-
     }
 
     @Override

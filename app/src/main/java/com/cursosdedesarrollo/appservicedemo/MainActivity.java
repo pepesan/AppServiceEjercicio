@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             String data=intent.getStringExtra("dato");
             Log.d("app","MainActivity: ProgressReceiver: dato: "+data);
-            //if(intent.getAction().equals(DatosService.ACTION_FINAL)) {
-                //Toast.makeText(MainActivity.this, "Tarea finalizada!", Toast.LENGTH_SHORT).show();
-            //}
+            Log.d("app","MainActivity: ProgressReceiver: listado: "+listado.toString());
+            Toast.makeText(MainActivity.this, "Tarea finalizada!", Toast.LENGTH_SHORT).show();
+
         }
     };
     @Override

@@ -17,7 +17,6 @@ public class Aplicacion extends Application {
         super.onCreate();
         modelo=new Modelo();
         Log.d("app","Aplicacion: Carga de mi clase Aplicación!");
-        modelo.getCadenasDAO().loadListado();
         Log.d("app","Aplicacion: Carga los datos: "+modelo.getCadenasDAO().find().toString());
     }
 
